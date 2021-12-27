@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink} from './Navbarelements';
 
 export const Navbar = () => {
@@ -8,11 +8,8 @@ export const Navbar = () => {
             <NavLink to="/">
                 <img src="Logo PPKM fixxxxx3x.png"/>
             </NavLink>
-            <Bars />
+            <Bars/>
             <NavMenu>
-                <NavLink to="/home" activeStyle>
-                    Home
-                </NavLink>
                 <NavLink to="/Minggu-Kreasi" activeStyle>
                     Minggu Kreasi
                 </NavLink>

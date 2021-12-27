@@ -3,7 +3,7 @@ import { NavLink as Link } from 'react-router-dom'
 import { HiMenu } from 'react-icons/hi'
 
 export const Nav = styled.nav`
-    background: #fff;
+    background: #;
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -26,7 +26,7 @@ export const NavLink = styled(Link)`
 `
 export const Bars = styled(HiMenu)`
     display: none;
-    color: #412d82;
+    color: #FDF8F4;
 
     @media screen and (max-width: 760px){
         display: block;
@@ -60,7 +60,7 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(Link)`
         border-radius: 4px;
-        background: #265ce1;
+        background: #D85752;
         padding: 10px 22px;
         color: #fff;
         border: none;
