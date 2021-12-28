@@ -1,11 +1,11 @@
-import react from 'react';
+import React, { useState, useEffect} from 'react';
 import './App.css';
 import Navbar from './Components/NavBar';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Home from './pages';
-import MK from './pages/mk';
-import WoA from './pages/woa';
-import GFH from './pages/gfh';
+import Home from './Components/pages';
+import MK from './Components/pages/mk';
+import WoA from './Components/pages/woa';
+import GFH from './Components/pages/gfh';
 
 function App() {
   return (

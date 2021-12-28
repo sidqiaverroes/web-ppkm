@@ -1,14 +1,15 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink} from './Navbarelements';
 
 export const Navbar = () => {
+
     return (
     <>
         <Nav>
             <NavLink to="/">
                 <img src="Logo PPKM fixxxxx3x.png"/>
             </NavLink>
-            <Bars/>
+            <Bars />
             <NavMenu>
                 <NavLink to="/Minggu-Kreasi" activeStyle>
                     Minggu Kreasi

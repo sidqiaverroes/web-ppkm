@@ -26,7 +26,7 @@ export const NavLink = styled(Link)`
 `
 export const Bars = styled(HiMenu)`
     display: none;
-    color: #FDF8F4;
+    color: #422E83;
 
     @media screen and (max-width: 760px){
         display: block;

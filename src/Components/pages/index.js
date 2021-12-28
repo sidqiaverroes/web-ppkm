@@ -1,21 +1,21 @@
 // import React from 'react'
 import './index.css'
-import '../App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const PPKM = () => {
   return (
     <body>
         <div class="home-container">
-            <div class="container-md">
+            <div class="container">
                 <div class="row">
                     <div class="col">
-                        Column
+                        test
                     </div>
                     <div class="col">
-                        Column
+                        Column 2
                     </div>
                     <div class="col">
-                        Column
+                        Column 3
                     </div>
                 </div>
             </div>
