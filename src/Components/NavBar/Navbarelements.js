@@ -4,7 +4,7 @@ import { HiMenu } from 'react-icons/hi'
 
 export const Nav = styled.nav`
     background: #;
-    height: 80px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     padding: 0.5rem calc((100vw - 1000px)/2);
@@ -59,9 +59,9 @@ export const NavBtn = styled.nav`
 `
 
 export const NavBtnLink = styled(Link)`
-        border-radius: 4px;
+        border-radius: 50px;
         background: #D85752;
-        padding: 10px 22px;
+        padding: 5px 17px;
         color: #fff;
         border: none;
         outline: none;

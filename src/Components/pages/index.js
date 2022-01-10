@@ -1,10 +1,16 @@
-// import React from 'react'
+import React from 'react'
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import HeroSection from '../HeroSection';
+import CardSection from '../CardSection';
 
 const PPKM = () => {
   return (
-    <body>
+      <>
+            <HeroSection />
+            <CardSection />
+      </>
+    /* <body>
         <div class="home-container">
             <div class="container">
                 <div class="row">
@@ -24,7 +30,8 @@ const PPKM = () => {
     // <div class='home-container'>
     //   <h1>KEMENTERIAN PENGEMBANGAN POTENSI DAN KARYA MAHASISWA UNIVERSITAS GADJAH MADA</h1>
     // </div>
-  )
+    */
+  );
 }
 
 export default PPKM
