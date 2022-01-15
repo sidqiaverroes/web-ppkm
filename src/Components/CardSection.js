@@ -1,66 +1,72 @@
-import React from 'react';
+import "./CardSection.css";
 import styled from 'styled-components';
-import { Card } from 'react-bootstrap';
-import { motion } from 'framer-motion';
+import { useState } from "react";
+import Slider from "react-slick";
+import GFHPic from './Images/Group 9.svg';
+import ImeetPic from './Images/Group 8.svg';
+import FGMPic from './Images/Group 7.svg';
+import Gamatalks from './Images/Group 6.svg';
+import HaloPPKM from './Images/Group 5.svg';
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+
+const images = [GFHPic, ImeetPic, FGMPic, Gamatalks, HaloPPKM];
 
 const Section = styled.section`
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #E5E5E5;
-  overflow: hidden;
+  background: #FDF8F4;
+  border-radius: 60px 60px 0px 0px;
 `;
 
-const Container = styled.div`
-  display: grid;
-  grid-template-columns: 66% auto;
-  height: 100vh;
-  
+function CardSection() {
+  const NextArrow = ({ onClick }) => {
+    return (
+      <div className="arrow next" onClick={onClick}>
+        <FaArrowRight />
+      </div>
+    );
+  };
 
-  @media screen and (max-width: 768px) {
-    grid-grid-template-columns: 1fr;
-  }
-`;
+  const PrevArrow = ({ onClick }) => {
+    return (
+      <div className="arrow prev" onClick={onClick}>
+        <FaArrowLeft />
+      </div>
+    );
+  };
 
-const Button = styled(motion.button)`
-  padding: 0.5rem 2.0rem;
-  margin-left: 2rem;
-  font-size: 1rem;
-  border: 2px solid #EDA634;
-  border-radius: 100px;
-  outline: none;
-  cursor: pointer;
-  background: #EDA634;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
-  transition: all 0.3s ease-out;
-  transition: 250ms;
-`;
+  const [imageIndex, setImageIndex] = useState(0);
 
-const CardSection = () => {
-  const fadeLeft = {
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0 }
+  const settings = {
+    infinite: true,
+    lazyLoad: true,
+    speed: 300,
+    slidesToShow: 3,
+    centerMode: true,
+    centerPadding: 0,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    beforeChange: (current, next) => setImageIndex(next),
   };
 
   return (
     <Section>
-      <Container>
-      <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="holder.js/100px180" />
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
-  </Card.Body>
-</Card>
-      </Container>
+      <div className="CardSection">
+        <Slider {...settings}>
+          {images.map((img, idx) => (
+            <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
+              <img src={img} alt={img} />
+            </div>
+          ))}
+        </Slider>
+        <div className="Title">
+        < h2>Event</h2>
+        </div>
+      </div>
     </Section>
   );
-};
+}
 
 export default CardSection;

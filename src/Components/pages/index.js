@@ -3,12 +3,14 @@ import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HeroSection from '../HeroSection';
 import CardSection from '../CardSection';
+import ProfilePPKM from '../ProfilePPKM';
 
 const PPKM = () => {
   return (
       <>
-            <HeroSection />
-            <CardSection />
+            <HeroSection/>
+            <ProfilePPKM/>
+            <CardSection/>
       </>
     /* <body>
         <div class="home-container">

@@ -1,0 +1,75 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.CardSection {
+  width: 100%;
+  margin: 1rem 3rem; 
+  height: 540px;
+  margin-left: 1px;
+  /*background-color: #68edff;*/
+}
+
+
+.Title{
+    width: 150px;
+    height: 50px;
+    transform: translateX(80px);
+    background-color: #422E83;
+    border-radius: 30px;
+    margin-left: 30rem;
+    margin-top: -45rem;
+    padding: 8px;
+    padding-left: 40px;
+}
+
+.Title h2{
+    font-weight: 700;
+    font-size: 1.6em;
+    color: #FFF;
+}
+
+.slide img {
+  width: 25rem;
+  margin: 0 auto; 
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  /*background-color: #000 ;*/
+}
+
+.slide {
+  transform: scale(0.7);
+  transition: transform 300ms;
+  opacity: 0.6;
+  /*background-color: chartreuse;*/
+}
+
+.activeSlide {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.arrow {
+  /* background-color: #fff; */
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow svg {
+  transition: color 300ms;
+  color: #fff;
+}
+
+.arrow svg:hover {
+  color: #7429ff;
+}
+
+.next {
+  right: 8.7%;
+  top: 50%;
+}
+
+.prev {
+  left: 6.8%;
+  top: 50%;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.css';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import img from './Images/Slice.png'
 import circlesix from './Images/Ellipse6.svg'
 import circlesvn from './Images/Ellipse7.svg'
 import circleeig from './Images/Ellipse8.svg'
@@ -12,15 +13,14 @@ const Section = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #422E83;
   overflow: hidden;
+  background-image: url(${img});
 `;
 
 const Container = styled.div`
   display: grid;
   grid-template-columns: 66% auto;
   height: 100vh;
-  
 
   @media screen and (max-width: 768px) {
     grid-grid-template-columns: 1fr;
@@ -69,8 +69,8 @@ const ColumnRight = styled.div`
 
   //pink
   ${Image}:nth-child(1) { 
-    bottom: -200px;
-    right: -100px;
+    bottom: 500px;
+    left: -900px;
     width: 100%;
     height: 150%;
   }
@@ -163,6 +163,7 @@ const HeroSection = () => {
             src={circlesix}
             alt='circle'
             whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.05 }}
             drag={true}
             dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
             initial={{ opacity: 0, y: 0 }}
@@ -172,6 +173,7 @@ const HeroSection = () => {
             src={circlesvn}
             alt='circle'
             whileTap={{ scale: 0.6 }}
+            whileHover={{ scale: 1.05 }}
             drag={true}
             dragConstraints={{ left: 50, right: 0, top: 0, bottom: 50 }}
             initial={{ opacity: 0, x: 100 }}
@@ -181,6 +183,7 @@ const HeroSection = () => {
             src={circleeig}
             alt='circle'
             whileTap={{ scale: 0.8 }}
+            whileHover={{ scale: 1.05 }}
             drag={true}
             dragConstraints={{ left: 0, right: 250, top: 0, bottom: 50 }}
             initial={{ opacity: 0, x: -100 }}
@@ -190,6 +193,7 @@ const HeroSection = () => {
             src={circlenin}
             alt='circle'
             whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.05 }}
             drag={true}
             dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
             initial={{ opacity: 0, y: 100 }}
