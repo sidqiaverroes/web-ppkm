@@ -1,7 +1,9 @@
 import "./CardSection.css";
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { useState } from "react";
 import Slider from "react-slick";
+import circle from './Images/Group 30.svg'
 import GFHPic from './Images/Group 9.svg';
 import ImeetPic from './Images/Group 8.svg';
 import FGMPic from './Images/Group 7.svg';
@@ -37,6 +39,15 @@ function CardSection() {
     );
   };
 
+  const Image = styled(motion.img)`
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
+    right: 304px;
+`;
+
   const [imageIndex, setImageIndex] = useState(0);
 
   const settings = {
@@ -53,6 +64,16 @@ function CardSection() {
 
   return (
     <Section>
+      <Image
+            src={circle}
+            alt='circle'
+            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.05 }}
+            drag={true}
+            dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+            initial={{ opacity: 0, y: 0 }}
+            animate={{ opacity: 1, y: 0, scale:1.1, transition: { duration: 1 } }}
+          />
       <div className="CardSection">
         <Slider {...settings}>
           {images.map((img, idx) => (
@@ -62,7 +83,7 @@ function CardSection() {
           ))}
         </Slider>
         <div className="Title">
-        < h2>Event</h2>
+          <h2>Event</h2>
         </div>
       </div>
     </Section>

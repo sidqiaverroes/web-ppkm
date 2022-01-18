@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { NavLink as Link } from 'react-router-dom'
 import { HiMenu } from 'react-icons/hi'
 
+
 export const Nav = styled.nav`
     background: #;
     height: 60px;

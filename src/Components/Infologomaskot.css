@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Container{
+    background-color: #FDB137;
+    height: 130vh;
+    margin-bottom: -3.5rem;
+    padding-top: 10rem;
+}
+
+.Container h1{
+    background-color: #422E83;
+    font-weight:500;
+    color: white;
+    display: flex;
+    font-size: large;
+    border-radius: 30px;
+    height: 50px;
+    width: 150px;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    align-content: center;
+    margin: 0rem 1rem 1rem 40rem;
+}
+
+body{
+    font:Poppins, sans-serif;
+}
+
+.wrapper{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 18rem));
+    gap: 5rem;
+    justify-content:center;
+    background-color: #FDB137;
+    padding: 8rem;
+}
+
+.card{
+    min-width: 20 rem;
+    overflow: hidden;
+    box-shadow: 0 2px 20px #e1e5ee;
+    border-radius:0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 200ms ease-in ;
+    border-radius: 30px;
+}
+
+.card__image{
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+    align-items: center;
+}
+
+.card__title{
+    padding: 1rem;
+    padding-left: 2rem;
+    font-weight: 500;
+    margin: 0px;
+}
+
+.card__btn{
+    padding: 0.5rem 2rem;
+    margin: 0rem 1rem 1rem 1rem;
+    font-weight: 500;
+    font-size: 1.2em;
+    border-radius: 30px;
+    border: 1px solid;
+    background: #FDB137;
+    color: #fff;
+    transition:background 200ms ease-in, color 200ms ease-in;
+}
+
+.card__btn:hover{
+    background: #fff;
+    color: #000;
+}
+
+.card:hover{
+    transform: scale(1.02);
+}

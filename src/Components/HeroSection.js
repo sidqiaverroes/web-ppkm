@@ -15,6 +15,7 @@ const Section = styled.section`
   align-items: center;
   overflow: hidden;
   background-image: url(${img});
+  }
 `;
 
 const Container = styled.div`
